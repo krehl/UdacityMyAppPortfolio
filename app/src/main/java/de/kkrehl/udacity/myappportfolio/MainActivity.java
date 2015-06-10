@@ -1,17 +1,28 @@
 package de.kkrehl.udacity.myappportfolio;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+    }
+
+    public void buttonClicked(final View v) {
+        if (v.getClass().equals(android.support.v7.widget.AppCompatButton.class)) {
+            Toast toast = Toast.makeText(v.getContext(), "This will launch " + ((Button) v).getText() + " later!", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 
     @Override
