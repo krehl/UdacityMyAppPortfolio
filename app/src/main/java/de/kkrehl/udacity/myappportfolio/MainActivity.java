@@ -20,8 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClicked(final View v) {
         if (v.getClass().equals(android.support.v7.widget.AppCompatButton.class)) {
-            Toast toast = Toast.makeText(v.getContext(), "This will launch " + ((Button) v).getText() + " later!", Toast.LENGTH_SHORT);
-            toast.show();
+            Toast.makeText(v.getContext(), "This will launch " + ((Button) v).getText() + " later!", Toast.LENGTH_SHORT).show();
         }
     }
 
